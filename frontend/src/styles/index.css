@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.containerCards{
+    display: flex !important;
+    flex-flow: row wrap !important;
+    justify-content: center;
+    width: 100% !important;
+    background-color: #1f2937;
+}
+
+.containerData{
+    height: 90vh !important;
+    width: 50vh;
+}
+
+.containerImgCard{
+    height: 40vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.imageCard{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dataText{
+    padding: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
