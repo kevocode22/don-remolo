@@ -2,12 +2,30 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link as LinkRouter } from 'react-router-dom'
 import '../styles/index.css'
+
+
+
 const Cards = () => {
 
-
+  const user = useSelector(store => store.usersReducers.user)
   const pizzasP = useSelector(store => store.pizzasReducers.pizzas.pizzas)
 console.log(pizzasP)  
 
+async function addProductToCart(event) {
+  if (user) {
+      const idProduct = event.target.id
+      dispatch(shoppingActions.addProduct(idPack))
+      dispatch(shoppingActions.getUserProducts())
+      setReload(!reload)
+  } else {
+      toast.error("Primero Inicie Sesion")
+      setLoading(true);
+      setTimeout(() => {
+          setLoading(false);
+          navigate("/signin")
+      }, 1500)
+  }
+}
 
   return (
     <>

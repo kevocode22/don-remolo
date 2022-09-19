@@ -98,7 +98,7 @@ const Contact = () => {
   <div className="relative w-full h-64 sm:h-96 lg:w-1/2 lg:h-full">
     <img
       className="absolute inset-0 object-cover w-full h-full"
-      src="https://www.hyperui.dev/photos/team-1.jpeg"
+      src="https://img.freepik.com/premium-vector/delicious-pizza-pattern-vector-design_92495-103.jpg?w=2000"
       alt=""
     />
   </div>
