@@ -13,8 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={reduxStore}>
     <BrowserRouter>
-      <App/>    
-      
+      <App/>      
     </BrowserRouter>
     </Provider>
 );

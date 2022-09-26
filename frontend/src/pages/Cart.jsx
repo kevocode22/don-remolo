@@ -2,107 +2,246 @@ import React from 'react'
 
 const Cart = () => {
   return (
-    <div>
-        <div
-  class="block p-10 sm:px-12 border-2 border-black bg-yellow-50 rounded-b-xl shadow-[0_4px_0_0_rgba(0,0,0,1)] max-w-sm w-screen"
-  aria-modal="true"
-  aria-label="Item added to your cart"
-  role="dialog"
-  tabindex="-1"
->
-  <div class="flex items-start justify-between">
-    <h2 class="flex items-center text-gray-700">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-4 h-4"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M5 13l4 4L19 7"
-        />
-      </svg>
-
-      <span class="ml-2 text-sm"> Item added to your cart </span>
-    </h2>
-
-    <button
-      class="-mt-6 -mr-6 transition-transform sm:-mr-8 hover:scale-110"
-      type="button"
-      aria-label="Close"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-5 h-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M6 18L18 6M6 6l12 12"
-        />
-      </svg>
-    </button>
-  </div>
-
-  <div class="flex items-start pt-8 pb-12">
-    <img
-      class="object-cover w-16 h-20 border-2 border-black rounded-lg"
-      src="../../photos/tee-green-person-2.png"
-      alt="Basic Tee"
-    />
-
-    <div class="ml-4">
-      <h3 class="text-sm">Basic Tee 6-Pack</h3>
-
-      <dl class="mt-1 text-xs text-gray-500 space-y-1">
-        <div>
-          <dt class="inline">Size:</dt>
-          <dd class="inline">XXS</dd>
+    <section>
+    <h1 class="sr-only">Checkout</h1>
+  
+    <div class="relative mx-auto max-w-screen-2xl">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="py-12 bg-gray-50 md:py-24">
+          <div class="max-w-lg px-4 mx-auto lg:px-8">
+            <div class="flex items-center">
+              <span class="w-10 h-10 bg-blue-900 rounded-full"></span>
+  
+              <h2 class="ml-4 font-medium">Don Remolo</h2>
+            </div>
+  
+            <div class="mt-8">
+              <p class="text-2xl font-medium tracking-tight">$99.99</p>
+              <p class="mt-1 text-sm text-gray-500">For the purchase of</p>
+            </div>
+  
+            <div class="mt-12">
+              <div class="flow-root">
+                <ul class="-my-4 divide-y divide-gray-200">
+                  <li class="flex items-center justify-between py-4">
+                    <div class="flex items-start">
+                      <img
+                        alt="Trainer"
+                        src="https://images.unsplash.com/photo-1565299999261-28ba859019bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                        class="flex-shrink-0 object-cover w-16 h-16 rounded-lg"
+                      />
+  
+                      <div class="ml-4">
+                        <p class="text-sm">Vibrant Trainers</p>
+  
+                        <dl class="mt-1 space-y-1 text-xs text-gray-500">
+                          <div>
+                            <dt class="inline">Color:</dt>
+                            <dd class="inline">Blue</dd>
+                          </div>
+  
+                          <div>
+                            <dt class="inline">Size:</dt>
+                            <dd class="inline">UK 10</dd>
+                          </div>
+                        </dl>
+                      </div>
+                    </div>
+  
+                    <div>
+                      <p class="text-sm">
+                        $49.99
+                        <small class="text-gray-500">x1</small>
+                      </p>
+                    </div>
+                  </li>
+  
+                  <li class="flex items-center justify-between py-4">
+                    <div class="flex items-start">
+                      <img
+                        alt="Lettuce"
+                        src="https://images.unsplash.com/photo-1640958904159-51ae08bd3412?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
+                        class="flex-shrink-0 object-cover w-16 h-16 rounded-lg"
+                      />
+  
+                      <div class="ml-4">
+                        <p class="text-sm">Lettuce</p>
+  
+                        <dl class="mt-1 space-y-1 text-xs text-gray-500">
+                          <div>
+                            <dt class="inline">Size:</dt>
+                            <dd class="inline">Big</dd>
+                          </div>
+                        </dl>
+                      </div>
+                    </div>
+  
+                    <div>
+                      <p class="text-sm">
+                        $25
+                        <small class="text-gray-500">x2</small>
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div>
-          <dt class="inline">Color:</dt>
-          <dd class="inline">White</dd>
+  
+        <div class="py-12 bg-white md:py-24">
+          <div class="max-w-lg px-4 mx-auto lg:px-8">
+            <form class="grid grid-cols-6 gap-4">
+              <div class="col-span-3">
+                <label class="block mb-1 text-sm text-gray-600" for="first_name">
+                  First Name
+                </label>
+  
+                <input
+                  class="rounded-lg shadow-sm border-gray-200 w-full text-sm p-2.5"
+                  type="text"
+                  id="frst_name"
+                />
+              </div>
+  
+              <div class="col-span-3">
+                <label class="block mb-1 text-sm text-gray-600" for="last_name">
+                  Last Name
+                </label>
+  
+                <input
+                  class="rounded-lg shadow-sm border-gray-200 w-full text-sm p-2.5"
+                  type="text"
+                  id="last_name"
+                />
+              </div>
+  
+              <div class="col-span-6">
+                <label class="block mb-1 text-sm text-gray-600" for="email">
+                  Email
+                </label>
+  
+                <input
+                  class="rounded-lg shadow-sm border-gray-200 w-full text-sm p-2.5"
+                  type="email"
+                  id="email"
+                />
+              </div>
+  
+              <div class="col-span-6">
+                <label class="block mb-1 text-sm text-gray-600" for="phone">
+                  Phone
+                </label>
+  
+                <input
+                  class="rounded-lg shadow-sm border-gray-200 w-full text-sm p-2.5"
+                  type="tel"
+                  id="phone"
+                />
+              </div>
+  
+              <fieldset class="col-span-6">
+                <legend class="block mb-1 text-sm text-gray-600">
+                  Card Details
+                </legend>
+  
+                <div class="-space-y-px bg-white rounded-lg shadow-sm">
+                  <div>
+                    <label class="sr-only" for="card-number">Card Number</label>
+  
+                    <input
+                      class="border-gray-200 relative rounded-t-lg w-full focus:z-10 text-sm p-2.5 placeholder-gray-400"
+                      type="text"
+                      name="card-number"
+                      id="card-number"
+                      placeholder="Card number"
+                    />
+                  </div>
+  
+                  <div class="flex -space-x-px">
+                    <div class="flex-1">
+                      <label class="sr-only" for="card-expiration-date">
+                        Expiration Date
+                      </label>
+  
+                      <input
+                        class="border-gray-200 relative rounded-bl-lg w-full focus:z-10 text-sm p-2.5 placeholder-gray-400"
+                        type="text"
+                        name="card-expiration-date"
+                        id="card-expiration-date"
+                        placeholder="MM / YY"
+                      />
+                    </div>
+  
+                    <div class="flex-1">
+                      <label class="sr-only" for="card-cvc">CVC</label>
+  
+                      <input
+                        class="border-gray-200 relative rounded-br-lg w-full focus:z-10 text-sm p-2.5 placeholder-gray-400"
+                        type="text"
+                        name="card-cvc"
+                        id="card-cvc"
+                        placeholder="CVC"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+  
+              <fieldset class="col-span-6">
+                <legend class="block mb-1 text-sm text-gray-600">
+                  Billing Address
+                </legend>
+  
+                <div class="-space-y-px bg-white rounded-lg shadow-sm">
+                  <div>
+                    <label class="sr-only" for="country">State</label>
+  
+                    <select
+                      class="border-gray-200 relative rounded-t-lg w-full focus:z-10 text-sm p-2.5"
+                      id="country"
+                      name="country"
+                      autocomplete="country-name"
+                    >
+                      <option>New York</option>
+                      <option>Pennsylvania</option>
+                      <option>Los Angeles</option>
+                      <option>California</option>
+                    </select>
+                  </div>
+  
+                  <div>
+                    <label class="sr-only" for="postal-code">
+                      ZIP/Post Code
+                    </label>
+  
+                    <input
+                      class="border-gray-200 relative rounded-b-lg w-full focus:z-10 text-sm p-2.5 placeholder-gray-400"
+                      type="text"
+                      name="postal-code"
+                      id="postal-code"
+                      autocomplete="postal-code"
+                      placeholder="ZIP/Post Code"
+                    />
+                  </div>
+                </div>
+              </fieldset>
+  
+              <div class="col-span-6">
+                <button
+                  class="rounded-lg bg-black text-sm p-2.5 text-white w-full block"
+                  type="submit"
+                >
+                  Pay Now
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </dl>
+      </div>
     </div>
-  </div>
-
-  <div class="text-center space-y-4">
-    <a
-      class="block p-4 text-sm border-2 border-black rounded-full hover:ring-1 hover:ring-black shadow-[0_4px_0_0_rgba(0,0,0,1)] font-medium"
-      href="/cart"
-    >
-      View my cart (2)
-    </a>
-
-    <form action="/cart" method="post">
-      <button
-        class="block w-full p-4 text-sm font-medium rounded-full text-yellow-50 bg-rose-900 hover:ring-1 hover:ring-rose-900"
-        type="submit"
-      >
-        Check out
-      </button>
-    </form>
-
-    <a
-      class="inline-block text-sm tracking-wide underline underline-offset-4 hover:text-2xl/75"
-      href="/collections/all"
-    >
-      Continue shopping
-    </a>
-  </div>
-</div>
-
-    </div>
+  </section>
+  
   )
 }
 

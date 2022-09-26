@@ -35,3 +35,18 @@
     align-items: center;
     justify-content: center;
 }
+
+.buttonCart{
+    display: flex;
+    padding: 0.5rem;
+    background-color:rgb(10, 10, 143);
+    color: white;
+    margin-top: auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+
+}
