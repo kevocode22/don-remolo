@@ -7,7 +7,7 @@ getPizzas:()=>{
     return async(dispatch, getState)=>{
         const res = await axios.get(url + `api/products`);
         dispatch({ type: "GETPIZZAS", payload: res.data.response })
-        console.log(res.data.response)
+        // console.log(res.data.response)
     }},
 
     getOnePizza:(id) =>{

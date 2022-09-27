@@ -5,7 +5,7 @@ import Logo from '../assets/logo.jpg'
 const Nav = () => {
   return (
     <div>
-<header className="border-b border-gray-100 text-black bg-white">
+<header className="border-black bg-gray-900">
   <div
     className="flex items-center justify-between h-16 mx-auto max-w-screen-2xl sm:px-6 lg:px-8"
   >
@@ -39,12 +39,12 @@ const Nav = () => {
 
       <div className="flex items-center ml-8">
         <div
-          className="flex items-center border-gray-100 divide-x divide-gray-100 border-x"
+          className="flex items-center border-black divide-x divide-black border-x"
         >
           <span>
             <LinkRouter
               to="/cart"
-              className="block p-6 border-b-4 border-transparent hover:border-red-700"
+              className="block p-5 border-b hover:border-red-700"
               title="Cart"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -59,7 +59,7 @@ const Nav = () => {
           <span>
             <LinkRouter
               to="/login"
-              className="block p-6 border-b-4 border-transparent hover:border-red-700"
+              className="block p-5 border-b hover:border-red-700"
               title="Account"
             >
              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

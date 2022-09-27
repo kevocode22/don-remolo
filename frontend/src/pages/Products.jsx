@@ -4,8 +4,6 @@ import '../styles/index.css'
 
 const Products = () => {
 
-
-
   return (
     <div className="containerCards">
 <Cards/>
