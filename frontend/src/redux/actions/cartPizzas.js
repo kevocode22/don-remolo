@@ -34,13 +34,13 @@ deleteProduct: (id) => {
       }
     }},
 
-  getOneProduct: (id) => {
+  getOnePizza: (id) => {
         const token = localStorage.getItem('token')
         return async(dispatch, getState) => {
             const answer = await axios.get(url+`api/cart/${id}`,{headers: {Authorization: "Bearer "+token}})
-            // console.log(answer)
+            console.log(answer)
             dispatch({type:'GET_ONE', payload:answer.data.response})
-            return (answer.data.response)
+            return (answer.data)
         }
     },
     modifyProduct: (modifyCarrito) => {

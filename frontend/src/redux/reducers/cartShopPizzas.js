@@ -3,7 +3,7 @@ const initialState = {
     onePizza: []
 }
 
-const cartPizzas = (state = initialState, action) => {
+const cartShopPizzas = (state = initialState, action) => {
     switch (action.type) {
         case 'GET_PRO':
             return {
@@ -19,4 +19,4 @@ const cartPizzas = (state = initialState, action) => {
             return state
     }
 }
-export default cartPizzas
+export default cartShopPizzas

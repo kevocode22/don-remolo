@@ -8,13 +8,13 @@ import toast from 'react-hot-toast';
 
 const Cards = () => {
 
-  const pizzasP = useSelector(store => store.pizzasReducers.pizzas.pizzas)
+  const pizzasP = useSelector(store => store.pizzasReducers.pizzas.pizzas) //for map pizzas products
   const navigate = useNavigate()
   const { id } = useParams()
   const dispatch = useDispatch()
   const [reload, setReload] = useState(false)
   const user = useSelector(store => store.usersReducer.user)
-  console.log(user)
+  // console.log(user)
   
   const [loading, setLoading] = useState(false)
   useEffect(() => {
@@ -25,18 +25,20 @@ const Cards = () => {
   }, []);
 
   useEffect(() => {
-    let res = dispatch(cartPizzas.getOneProduct(id))
+    let res = dispatch(cartPizzas?.getOneProduct(id))
     console.log(res)
     // eslint-disable-next-line
   }, [])
 
-  const pizza = useSelector(store => store.cartPizzas.oneProduct)
+  const pizza = useSelector(store => store.cartShopPizzas.onePizza)
+  console.log(pizza)
 
   async function addToCart(event) {
     if (user) {
       const idPizza = event.target.id
-      dispatch(cartPizzas.addProduct(idPizza))
-      dispatch(cartPizzas.getUserProducts())
+      dispatch(cartPizzas?.addProduct(idPizza))
+      let res= dispatch(cartPizzas?.getUserProducts())
+      console.log(res)
       setReload(!reload)
     } else {
       toast.error("Primero Inicie Sesion")

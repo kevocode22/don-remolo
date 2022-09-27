@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Cart = () => {
+
+  
   return (
     <section>
       <h1 class="sr-only">Checkout</h1>

@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import usersReducer from "./usersReducer";
 import pizzasReducers from './pizzasReducers'
-import cartPizzas from "./cartPizzas";
+import cartShopPizzas from "./cartShopPizzas";
 
 const mainReducers = combineReducers({
-    usersReducer, pizzasReducers, cartPizzas
+    usersReducer, pizzasReducers, cartShopPizzas
 })
 
 export default mainReducers
